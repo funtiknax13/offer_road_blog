@@ -1,0 +1,10 @@
+# Hugo build output and caches
+public/
+public_test/
+public_prod/
+resources/
+.hugo_build.lock
+
+# OS
+.DS_Store
+Thumbs.db

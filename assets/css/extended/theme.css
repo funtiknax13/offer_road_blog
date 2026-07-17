@@ -1,0 +1,75 @@
+/* Брендинг «Путь к офферу» / offerroad.ru — тёплая «дорожная» палитра поверх
+   монохромной темы PaperMod (у неё по умолчанию нет акцентного цвета вообще). */
+
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --main-width: 720px;
+  --header-height: 60px;
+  --footer-height: 60px;
+  --radius: 10px;
+
+  --theme: rgb(247, 241, 231);      /* тёплая бумага вместо белого */
+  --entry: rgb(255, 253, 248);
+  --primary: rgb(34, 29, 23);       /* тёплый чёрно-коричневый, не чистый чёрный */
+  --secondary: rgb(122, 111, 94);
+  --tertiary: rgb(228, 216, 195);
+  --content: rgb(43, 37, 30);
+  --code-block-bg: rgb(34, 29, 23);
+  --code-bg: rgb(238, 229, 211);
+  --border: rgb(228, 216, 195);
+  --accent: rgb(181, 80, 45);       /* ржаво-терракотовый, «дорожный» акцент */
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --theme: rgb(27, 24, 21);         /* тёплый асфальт вместо сине-чёрного */
+  --entry: rgb(38, 34, 29);
+  --primary: rgb(230, 224, 212);
+  --secondary: rgb(158, 148, 132);
+  --tertiary: rgb(58, 52, 44);
+  --content: rgb(214, 207, 193);
+  --code-block-bg: rgb(38, 34, 29);
+  --code-bg: rgb(46, 41, 35);
+  --border: rgb(58, 52, 44);
+  --accent: rgb(224, 138, 79);      /* тот же акцент, но светлее — контраст на тёмном фоне */
+  color-scheme: dark;
+}
+
+/* Логотип/название в шапке — акцентный цвет + фирменный шрифт (см. fonts.css) */
+.logo a {
+  color: var(--accent);
+}
+
+/* Ссылки в тексте статьи */
+.md-content a:not(.anchor) {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* Активный пункт меню */
+.menu .active {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+/* Тег-пилюли — акцентная рамка вместо серой */
+.post-tags a {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.post-tags a:hover {
+  background: var(--accent);
+  color: var(--theme);
+}
+
+/* Заголовки карточек статей в списке — акцент при наведении */
+.entry-header h2 {
+  transition: color 0.15s ease;
+}
+
+.post-entry:hover .entry-header h2 {
+  color: var(--accent);
+}
