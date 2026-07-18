@@ -3,22 +3,19 @@
   Здесь — места под верификацию и аналитику, которые нельзя завести без ваших аккаунтов.
 -->
 
-<!-- Яндекс.Вебмастер: подтверждение прав на сайт (Яндекс.Вебмастер → Добавить сайт → мета-тег).
-     Замените content ниже на код, который выдаст Вебмастер, ИЛИ используйте способ через
-     DNS TXT-запись / HTML-файл вместо этого мета-тега — тогда просто удалите строку. -->
-<meta name="yandex-verification" content="ЗАМЕНИТЕ_НА_КОД_ИЗ_YANDEX_WEBMASTER" />
+<!-- Яндекс.Вебмастер подтверждён HTML-файлом (static/yandex_a42c0aefe7428737.html),
+     мета-тег для этого не нужен. -->
 
-<!-- Яндекс.Метрика: замените XXXXXXX на ID счётчика после того, как заведёте его в Метрике.
-     Пока ID не вставлен, скрипт закомментирован, чтобы не слать невалидные запросы. -->
-<!--
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=110845012', 'ym');
 
-   ym(XXXXXXX, "init", {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    ym(110845012, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script>
-<noscript><div><img src="https://mc.yandex.ru/watch/XXXXXXX" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
--->
+<noscript><div><img src="https://mc.yandex.ru/watch/110845012" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
