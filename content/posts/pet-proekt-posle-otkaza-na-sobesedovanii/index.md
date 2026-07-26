@@ -36,10 +36,14 @@ cover:
 
 Для тех, кто не хочет регистрироваться, оставил бесплатные калькуляторы: разбор GPX/FIT-файла, расчёт темпа, прогноз результата на дистанции по одному забегу, пульсовые зоны, разряды.
 
-![Чат с ИИ-тренером в AIRunningCoach](images/screenshot-1-chat.png)
-![Экран плана тренировок](images/screenshot-2-plan.png)
-![Бейджи и личные рекорды](images/screenshot-3-badges.png)
-![Бесплатные калькуляторы для бегунов](images/screenshot-4-calculators.png)
+<div class="screenshot-grid">
+
+{{< figure src="images/screenshot-1-chat.png" caption="Чат с ИИ-тренером — разбор недели восстановления после травмы" >}}
+{{< figure src="images/screenshot-2-plan.png" caption="План тренировок на неделю, привязанный к пользователю" >}}
+{{< figure src="images/screenshot-3-badges.png" caption="Личные рекорды, бейджи и разряд по ЕВСК" >}}
+{{< figure src="images/screenshot-4-calculators.png" caption="Бесплатные калькуляторы для бегунов без регистрации" >}}
+
+</div>
 
 ## Стек, который реально видно в резюме: Vue 3, FastAPI, Postgres, DeepSeek API
 
@@ -47,8 +51,12 @@ cover:
 
 Ничего сверхъестественного тут нет, но это живой, актуальный стек, а не набор технологий из учебника трёхлетней давности. Когда на собеседовании спрашивают "с чем вы работали", гораздо приятнее отвечать не "проходил курс", а "вот, делал на этом продакшен-сервис, вот ссылка, можете сами потыкать".
 
-![Импорт тренировок по ссылке с часов](images/screenshot-5-import.png)
-![Переключение языка интерфейса](images/screenshot-6-lang.png)
+<div class="screenshot-grid">
+
+{{< figure src="images/screenshot-5-import.png" caption="Импорт тренировок — загрузка файла или вставка ссылки с часов" >}}
+{{< figure src="images/screenshot-6-lang.png" caption="Главный дашборд сервиса" >}}
+
+</div>
 
 ## Довести до продакшена - это не только код: самозанятость, ЮKassa, документы
 

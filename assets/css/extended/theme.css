@@ -46,6 +46,31 @@
   margin: var(--gap) 0 var(--gap) 0;
 }
 
+/* Сетка для нескольких скриншотов подряд в статье — оборачивать группу шорткодов
+   figure в <div class="screenshot-grid">...</div> прямо в markdown (unsafe = true
+   в hugo.toml это разрешает). На мобильных сжимается в один столбец. */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+  margin-bottom: var(--content-gap);
+}
+
+.screenshot-grid figure {
+  margin: 0;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .screenshot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Логотип/название в шапке — акцентный цвет + фирменный шрифт (см. fonts.css) */
 .logo a {
   color: var(--accent);
