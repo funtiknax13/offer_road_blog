@@ -1,0 +1,110 @@
+/*! Кастомная светлая тема giscus под палитру offerroad.ru.
+ * Основа — официальная тема giscus (MIT, GitHub Inc.), см.
+ * https://github.com/giscus/giscus/blob/main/styles/themes/light.css
+ * Переопределены только поверхность/текст/рамки/акцент под сайт —
+ * цвета синтаксиса и success/attention/danger оставлены как есть.
+ */
+
+main {
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #0550ae;
+  --color-prettylights-syntax-entity: #8250df;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+
+  /* Кнопки — вторичные (например "Войти", "Отмена") */
+  --color-btn-text: rgb(34, 29, 23);
+  --color-btn-bg: rgb(238, 229, 211);
+  --color-btn-border: rgb(34 29 23 / 15%);
+  --color-btn-shadow: none;
+  --color-btn-inset-shadow: none;
+  --color-btn-hover-bg: rgb(228, 216, 195);
+  --color-btn-hover-border: rgb(34 29 23 / 15%);
+  --color-btn-active-bg: rgb(228, 216, 195);
+  --color-btn-active-border: rgb(34 29 23 / 20%);
+  --color-btn-selected-bg: rgb(228, 216, 195);
+
+  /* Кнопки — основные (например "Комментировать") */
+  --color-btn-primary-text: rgb(255, 253, 248);
+  --color-btn-primary-bg: rgb(181, 80, 45);
+  --color-btn-primary-border: rgb(181, 80, 45);
+  --color-btn-primary-shadow: none;
+  --color-btn-primary-inset-shadow: none;
+  --color-btn-primary-hover-bg: rgb(160, 68, 37);
+  --color-btn-primary-hover-border: rgb(160, 68, 37);
+  --color-btn-primary-selected-bg: rgb(160, 68, 37);
+  --color-btn-primary-selected-shadow: none;
+  --color-btn-primary-disabled-text: rgb(255 253 248 / 80%);
+  --color-btn-primary-disabled-bg: rgb(181 80 45 / 50%);
+  --color-btn-primary-disabled-border: rgb(181 80 45 / 50%);
+
+  --color-action-list-item-default-hover-bg: rgb(228 216 195 / 50%);
+  --color-segmented-control-bg: rgb(238, 229, 211);
+  --color-segmented-control-button-bg: rgb(255, 253, 248);
+  --color-segmented-control-button-selected-border: rgb(122, 111, 94);
+
+  /* Текст и поверхности — те же переменные, что и в основной теме сайта */
+  --color-fg-default: rgb(34, 29, 23);
+  --color-fg-muted: rgb(122, 111, 94);
+  --color-fg-subtle: rgb(122, 111, 94);
+  --color-canvas-default: rgb(255, 253, 248);
+  --color-canvas-overlay: rgb(255, 253, 248);
+  --color-canvas-inset: rgb(247, 241, 231);
+  --color-canvas-subtle: rgb(238, 229, 211);
+  --color-border-default: rgb(228, 216, 195);
+  --color-border-muted: rgb(228, 216, 195);
+  --color-neutral-muted: rgb(122 111 94 / 20%);
+
+  /* Акцент — терракотовый, как в остальной теме сайта */
+  --color-accent-fg: rgb(181, 80, 45);
+  --color-accent-emphasis: rgb(181, 80, 45);
+  --color-accent-muted: rgb(181 80 45 / 40%);
+  --color-accent-subtle: rgb(181 80 45 / 12%);
+
+  --color-success-fg: #1a7f37;
+  --color-attention-fg: #9a6700;
+  --color-attention-muted: rgb(212 167 44 / 40%);
+  --color-attention-subtle: #fff8c5;
+  --color-danger-fg: #d1242f;
+  --color-danger-muted: rgb(255 129 130 / 40%);
+  --color-danger-subtle: #ffebe9;
+  --color-primer-shadow-inset: inset 0 1px 0 rgb(208 215 222 / 20%);
+  --color-scale-gray-1: #eaeef2;
+  --color-scale-blue-1: #b6e3ff;
+
+  --color-social-reaction-bg-hover: var(--color-scale-gray-1);
+  --color-social-reaction-bg-reacted-hover: var(--color-scale-blue-1);
+}
+
+main .pagination-loader-container {
+  background-image: url("https://github.com/images/modules/pulls/progressive-disclosure-line.svg");
+}
+
+main .gsc-loading-image {
+  background-image: url("https://github.githubassets.com/images/mona-loading-default.gif");
+}

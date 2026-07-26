@@ -1,15 +1,45 @@
-<script src="https://giscus.app/client.js"
-        data-repo="funtiknax13/offer_road_blog"
-        data-repo-id="R_kgDOTbqZXw"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOTbqZX84DB_oE"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="ru"
-        crossorigin="anonymous"
-        async>
+<div id="giscus-container"></div>
+<script>
+  (function () {
+    function giscusThemeUrl() {
+      return document.documentElement.dataset.theme === "dark"
+        ? "https://offerroad.ru/giscus-dark.css"
+        : "https://offerroad.ru/giscus-light.css";
+    }
+
+    var script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "funtiknax13/offer_road_blog");
+    script.setAttribute("data-repo-id", "R_kgDOTbqZXw");
+    script.setAttribute("data-category", "Announcements");
+    script.setAttribute("data-category-id", "DIC_kwDOTbqZX84DB_oE");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", giscusThemeUrl());
+    script.setAttribute("data-lang", "ru");
+    script.setAttribute("crossorigin", "anonymous");
+    script.async = true;
+    document.getElementById("giscus-container").appendChild(script);
+
+    // Живая синхронизация с переключателем темы сайта (кнопка #theme-toggle
+    // из футера темы). setTimeout(...,0) гарантирует, что html.dataset.theme
+    // уже обновлён обработчиком темы к моменту нашей проверки, независимо от
+    // порядка регистрации слушателей на одной кнопке.
+    var toggleBtn = document.getElementById("theme-toggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", function () {
+        setTimeout(function () {
+          var iframe = document.querySelector("iframe.giscus-frame");
+          if (!iframe) return;
+          iframe.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: giscusThemeUrl() } } },
+            "https://giscus.app"
+          );
+        }, 0);
+      });
+    }
+  })();
 </script>
